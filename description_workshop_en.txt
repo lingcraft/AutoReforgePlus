@@ -1,0 +1,5 @@
+﻿﻿[img]https://i.imgur.com/ki1CPZe.gif[/img]
+[h2]Auto Reforge Plus[/h2]
+Original mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge[/url]
+Optimized version of Auto Reforge mod, one-click reforge equipment to the specified prefix, freeing your hands.
+Optimization: This mod allows you to freely drag the reforge window to adjust its position, and automatically memorize the window position. In addition, you can also set the X and Y coordinates of the window in the settings interface.

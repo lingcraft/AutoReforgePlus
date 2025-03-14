@@ -1,0 +1,4 @@
+﻿﻿[img]https://i.imgur.com/ki1CPZe.gif[/img]
+[h2]自动重铸优化版，一键重铸装备到指定前缀[/h2]
+原模组：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge[/url]
+优化说明：原模组的重铸界面固定，无法调整位置。本模组优化了这个功能，可以自由拖动重铸窗口调整位置，并且自动记忆窗口位置，除了可以手动拖动调整，还可以在设置界面设置窗口的X、Y坐标。

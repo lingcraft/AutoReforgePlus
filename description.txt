@@ -1,0 +1,3 @@
+自动重铸优化版，在原版基础上增加了窗口的拖动和位置记忆。
+------------------------------------------------------
+Auto Reforge Mod optimized version, adding window dragging and position memorizing based on the original version.

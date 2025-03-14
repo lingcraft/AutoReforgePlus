@@ -1,0 +1,8 @@
+displayName = 自动重铸优化版
+author = lingcraft
+version = 1.0.1
+noCompile = true
+hideCode = false
+hideResources = false
+includeSource = true
+buildIgnore = .git/, .vs/, .idea/, bin/, obj/, .gitattributes, .gitignore

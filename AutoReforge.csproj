@@ -1,0 +1,37 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>AutoReforge</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="Gadgets\新文件夹\**" />
+    <AdditionalFiles Remove="新文件夹\**" />
+    <Compile Remove="Gadgets\新文件夹\**" />
+    <Compile Remove="新文件夹\**" />
+    <EmbeddedResource Remove="Gadgets\新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹\**" />
+    <ModEffect Remove="Gadgets\新文件夹\**" />
+    <ModEffect Remove="新文件夹\**" />
+    <None Remove="Gadgets\新文件夹\**" />
+    <None Remove="新文件夹\**" />
+  </ItemGroup>
+  <ItemGroup>
+		<PackageReference Include="Solaestas.tModLoader.ModBuilder" Version="1.6.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="./README.md;./README-en.md;./How-To-Use-Search.md">
+			<Visible>false</Visible>
+		</None>
+		<None Include="./icon.png;./icon_workshop.png">
+			<Visible>false</Visible>
+		</None>
+		<None Include="./description.txt;./description_workshop.txt;./description_workshop_en.txt">
+			<Visible>true</Visible>
+		</None>
+		<None Include=".gitignore;.gitattributes;./LICENSE">
+			<Visible>false</Visible>
+		</None>
+	</ItemGroup>
+</Project>

@@ -1,0 +1,46 @@
+ModName: 自动重铸
+
+Configs: {
+	Config: {
+		DisplayName: 设置
+
+		ReforgePerSec: {
+			Label: 重铸速度
+			Tooltip: 每秒次数
+		}
+
+		UseDefaultReforgeMenu: {
+			Label: 使用原版重铸界面
+			Tooltip: ""
+		}
+
+		Lock: {
+			Label: 锁定重铸界面
+			Tooltip: 锁定重铸界面后，无法拖动。
+		}
+
+		UIPosition: {
+			Label: 重铸界面位置
+			Tooltip: 重铸界面的位置。会自动保存，无需调整。
+		}
+	}
+}
+
+MoneyUI: {
+	Reserve: {
+		Label: 留下
+		Tooltip: 滚动鼠标滚轮调整
+	}
+}
+
+ReforgeUI: {
+	Lock: {
+		Label: 锁定
+		Tooltip: 解锁
+	}
+
+	Unlock: {
+		Label: 解锁
+		Tooltip: 锁定
+	}
+}
