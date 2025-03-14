@@ -1,5 +1,5 @@
-.vs/
-.idea/
-bin/
-obj/
+.vs
+.idea
+bin
+obj
 *.user
