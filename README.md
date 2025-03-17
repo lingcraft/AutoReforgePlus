@@ -18,4 +18,4 @@
 
 ## ⬇️ 下载
 
-本Mod已在Steam创意工坊发布，可直接订阅下载: <https://steamcommunity.com/sharedfiles/filedetails/?id=3443694510>
+本Mod已在Steam创意工坊发布，可直接订阅下载：[Auto Reforge Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3443694510)
