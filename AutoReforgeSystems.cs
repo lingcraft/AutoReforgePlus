@@ -33,14 +33,14 @@ namespace AutoReforge
             int mouseTextIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
             if (mouseTextIndex != -1)
             {
-
                 layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer(
                     "BestModifierRoll: MyInterface",
                     delegate
                     {
                         if (Main.playerInventory && !Main.recBigList)
                         {
-                            if (lastSeenScreenWidth != Main.screenWidth || lastSeenScreenHeight != Main.screenHeight || Main.hasFocus)
+                            if (lastSeenScreenWidth != Main.screenWidth || lastSeenScreenHeight != Main.screenHeight ||
+                                Main.hasFocus)
                             {
                                 userInterface.Recalculate();
                                 lastSeenScreenWidth = Main.screenWidth;
@@ -52,7 +52,7 @@ namespace AutoReforge
 
                         return true;
                     },
-           InterfaceScaleType.UI));
+                    InterfaceScaleType.UI));
             }
         }
     }
