@@ -9,8 +9,8 @@ Configs: {
 			Tooltip: 每秒次数
 		}
 
-		UseDefaultReforgeMenu: {
-			Label: 使用原版重铸界面
+		HideDefaultReforgeMenu: {
+			Label: 隐藏原版重铸界面
 			Tooltip: ""
 		}
 
@@ -28,7 +28,7 @@ Configs: {
 
 MoneyUI: {
 	Reserve: {
-		Label: 留下
+		Label: 保留
 		Tooltip: 滚动鼠标滚轮调整
 	}
 }

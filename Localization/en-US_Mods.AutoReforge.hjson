@@ -9,8 +9,8 @@ Configs: {
 			Tooltip: Reforge Per Sec
 		}
 
-		UseDefaultReforgeMenu: {
-			Label: Use Default Reforge Menu
+		HideDefaultReforgeMenu: {
+			Label: Hide Default Reforge Menu
 			Tooltip: ""
 		}
 

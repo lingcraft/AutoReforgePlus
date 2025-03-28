@@ -14,8 +14,8 @@ namespace AutoReforge
 		[Increment(1)]
 		public int ReforgePerSec { get; set; }
 
-		[DefaultValue(false)]
-		public bool UseDefaultReforgeMenu { get; set; }
+		[DefaultValue(true)]
+		public bool HideDefaultReforgeMenu { get; set; }
 
 		[DefaultValue(false)]
 		public bool Lock { get; set; }

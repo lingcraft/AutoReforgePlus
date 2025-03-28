@@ -13,10 +13,14 @@ namespace AutoReforge
 
         public override bool PreChatButtonClicked(NPC npc, bool firstButton)
         {
-            if (firstButton == false && !MyUtils.GetConfig().UseDefaultReforgeMenu)
+            if (!firstButton)
             {
                 Main.npcChatText = "";
                 AutoReforge.Instance.ReforgeMenu = true;
+            }
+            if (MyUtils.GetConfig().HideDefaultReforgeMenu)
+            {
+                return firstButton;
             }
             return true;
         }
