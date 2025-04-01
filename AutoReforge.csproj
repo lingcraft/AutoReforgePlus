@@ -6,18 +6,6 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AdditionalFiles Remove="Gadgets\新文件夹\**" />
-    <AdditionalFiles Remove="新文件夹\**" />
-    <Compile Remove="Gadgets\新文件夹\**" />
-    <Compile Remove="新文件夹\**" />
-    <EmbeddedResource Remove="Gadgets\新文件夹\**" />
-    <EmbeddedResource Remove="新文件夹\**" />
-    <ModEffect Remove="Gadgets\新文件夹\**" />
-    <ModEffect Remove="新文件夹\**" />
-    <None Remove="Gadgets\新文件夹\**" />
-    <None Remove="新文件夹\**" />
-  </ItemGroup>
-  <ItemGroup>
 		<PackageReference Include="Solaestas.tModLoader.ModBuilder" Version="1.6.1" />
 	</ItemGroup>
 	<ItemGroup>
