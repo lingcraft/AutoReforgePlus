@@ -28,6 +28,7 @@ namespace GadgetBox
                 {
                     reforgePrice = (int)(reforgePrice * 0.8f);
                 }
+                reforgePrice = (int)(reforgePrice * player.currentShoppingSettings.PriceAdjustment);
                 reforgePrice /= 3;
             }
             return reforgePrice;
