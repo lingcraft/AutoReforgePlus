@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 using Terraria.UI;
 
 namespace GadgetBox.GadgetUI
@@ -31,8 +32,7 @@ namespace GadgetBox.GadgetUI
             [11] = new Color(180, 40, 255)
         };
 
-        public UIReforgeLabel(Item shownItem) :
-            base(Lang.prefix[shownItem.prefix].Value, Color.White)
+        public UIReforgeLabel(Item shownItem) : base(Lang.prefix[shownItem.prefix].Value, Color.White)
         {
             this.shownItem = shownItem;
 
@@ -48,7 +48,9 @@ namespace GadgetBox.GadgetUI
             int recommendedComp = -recommended.CompareTo(other.recommended);
             int diffSelected = -selected.CompareTo(other.selected);
             int diffValue = -shownItem.value.CompareTo(other.shownItem.value);
-            return diffSelected != 0 ? diffSelected : recommendedComp != 0 ? recommendedComp : diffValue != 0 ? diffValue : shownItem.prefix.CompareTo(other.shownItem.prefix);
+            return diffSelected != 0 ? diffSelected :
+                recommendedComp != 0 ? recommendedComp :
+                diffValue != 0 ? diffValue : shownItem.prefix.CompareTo(other.shownItem.prefix);
         }
 
         public override void MouseOver(UIMouseEvent evt)
@@ -59,21 +61,25 @@ namespace GadgetBox.GadgetUI
         public override void DrawSelf(SpriteBatch spriteBatch)
         {
             BackgroundColor = selected ? Color.LightSkyBlue : Color.CornflowerBlue;
-            if (shownItem.expert || shownItem.rare == -12)
+            TextColor = Color.White;
+            if (shownItem.master || shownItem.rare == ItemRarityID.Master)
+            {
+                TextColor = new Color(255, (int)(Main.masterColor * 200f), 0);
+            }
+            else if (shownItem.expert || shownItem.rare == ItemRarityID.Expert)
             {
                 TextColor = Main.DiscoColor;
             }
-            else if (rarityColors.ContainsKey(shownItem.rare))
+            else if (rarityColors.TryGetValue(shownItem.rare, out var color))
             {
-                TextColor = rarityColors[shownItem.rare];
+                TextColor = color;
             }
-            else
+            else if (shownItem.rare >= ItemRarityID.Count)
             {
-                TextColor = Color.White;
+                TextColor = RarityLoader.GetRarity(shownItem.rare).RarityColor;
             }
 
             base.DrawSelf(spriteBatch);
-
             if (GetDimensions().ToRectangle().Contains(Main.mouseX, Main.mouseY))
             {
                 Main.HoverItem = shownItem.Clone();

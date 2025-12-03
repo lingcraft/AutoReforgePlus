@@ -261,7 +261,10 @@ namespace GadgetBox.GadgetUI
                     reforgeLabel.selected = true;
                     tempSelected.Add(prefix);
                 }
-                reforgeList.Add(reforgeLabel);
+                if (reforgeLabel.Text.Length > 0)
+                {
+                    reforgeList.Add(reforgeLabel);
+                }
             }
             selectedPrefixes = tempSelected;
         }
