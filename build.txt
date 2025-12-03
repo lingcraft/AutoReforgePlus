@@ -1,6 +1,6 @@
 displayName = 自动重铸优化版
 author = lingcraft
-version = 1.0.4
+version = 1.0.5
 noCompile = true
 homepage = https://github.com/lingcraft/AutoReforgePlus
 buildIgnore = *.user
