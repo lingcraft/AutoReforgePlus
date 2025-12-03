@@ -23,5 +23,5 @@ namespace AutoReforge
 		[DefaultValue(typeof(Vector2), "35, 340")]
 		[Range(0, 1920f)]
 		public Vector2 UIPosition { get; set; }
-	}
+    }
 }

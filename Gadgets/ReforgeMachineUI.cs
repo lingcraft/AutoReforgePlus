@@ -201,7 +201,8 @@ namespace GadgetBox.GadgetUI
 	        var newState = config.Lock ? "Lock" : "Unlock";
 	        lockButton.SetImage(MyUtils.GetTexture($"Button{newState}"));
 	        lockButton.HoverText = MyUtils.GetText($"ReforgeUI.{newState}.Tooltip");
-		}
+            MyUtils.SaveConfig();
+        }
 
 		private void OnReforgeButtonClick(UIMouseEvent evt, UIElement listeningElement)
         {
