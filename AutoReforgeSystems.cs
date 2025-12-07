@@ -18,7 +18,7 @@ namespace AutoReforge
         }
         public override void UpdateUI(GameTime gameTime)
         {
-            if (AutoReforge.Instance.ReforgeMenu && AutoReforge.Instance.isInReforgeMenu == false)
+            if (AutoReforge.Instance.isOpenReforgeMenu && AutoReforge.Instance.isInReforgeMenu == false)
             {
                 userInterface.SetState(new ReforgeMachineUI());
                 AutoReforge.Instance.isInReforgeMenu = true;

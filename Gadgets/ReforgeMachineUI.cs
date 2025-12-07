@@ -33,7 +33,7 @@ namespace GadgetBox.GadgetUI
         private HashSet<int> allowedPrefixes = new HashSet<int>();
         private readonly int PrefixCountX2 = PrefixLoader.PrefixCount * 2;
         private readonly Item air = new Item();
-        private Config config = MyUtils.GetConfig();
+        private Config config = GetConfig();
 
 		public override void OnInitialize()
         {
@@ -48,10 +48,10 @@ namespace GadgetBox.GadgetUI
             reforgePanel.MinHeight.Set(300, 0);
 
             var state = config.Lock ? "Lock" : "Unlock";
-			lockButton = new UIFancyButton(MyUtils.GetTexture($"Button{state}"));
+			lockButton = new UIFancyButton(GetTexture($"Button{state}"));
             lockButton.Left.Set(-24, 1);
             lockButton.Top.Set(1, 0);
-			lockButton.HoverText = MyUtils.GetText($"ReforgeUI.{state}.Tooltip");
+			lockButton.HoverText = GetText($"ReforgeUI.{state}.Tooltip");
 			lockButton.OnLeftMouseDown += OnLockButtonClick;
 			reforgePanel.Append(lockButton);
 
@@ -121,9 +121,9 @@ namespace GadgetBox.GadgetUI
             bool closeUI = false, silent = false;
             if (Main.LocalPlayer.talkNPC == -1)
             {
-                AutoReforge.AutoReforge.Instance.ReforgeMenu = false;
+                AutoReforge.AutoReforge.Instance.isOpenReforgeMenu = false;
             }
-            if (!AutoReforge.AutoReforge.Instance.ReforgeMenu)
+            if (!AutoReforge.AutoReforge.Instance.isOpenReforgeMenu)
             {
                 closeUI = true;
             }
@@ -136,7 +136,7 @@ namespace GadgetBox.GadgetUI
                 }
                 AutoReforge.AutoReforge.Instance.userInterface.SetState(null);
                 AutoReforge.AutoReforge.Instance.isInReforgeMenu = false;
-                AutoReforge.AutoReforge.Instance.ReforgeMenu = false;
+                AutoReforge.AutoReforge.Instance.isOpenReforgeMenu = false;
                 return;
             }
 
@@ -154,7 +154,7 @@ namespace GadgetBox.GadgetUI
                     autoReforge = false;
                     tickCounter = 0;
                 }
-                else if (tickCounter > 1000 / MyUtils.GetConfig().ReforgePerSec)
+                else if (tickCounter > 1000 / GetConfig().ReforgePerSec)
                 {
 
                     tickCounter = 0;
@@ -199,9 +199,9 @@ namespace GadgetBox.GadgetUI
         {
 	        config.Lock = !config.Lock;
 	        var newState = config.Lock ? "Lock" : "Unlock";
-	        lockButton.SetImage(MyUtils.GetTexture($"Button{newState}"));
-	        lockButton.HoverText = MyUtils.GetText($"ReforgeUI.{newState}.Tooltip");
-            MyUtils.SaveConfig();
+	        lockButton.SetImage(GetTexture($"Button{newState}"));
+	        lockButton.HoverText = GetText($"ReforgeUI.{newState}.Tooltip");
+            SaveConfig();
         }
 
 		private void OnReforgeButtonClick(UIMouseEvent evt, UIElement listeningElement)

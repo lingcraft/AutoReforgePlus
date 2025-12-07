@@ -23,7 +23,7 @@ namespace AutoReforge
 		{
 			public override void OnLocalizationsLoaded()
 			{
-				Instance.DisplayName = MyUtils.GetText("ModName");
+				Instance.DisplayName = GetText("ModName");
 			}
 		}
 
@@ -33,7 +33,7 @@ namespace AutoReforge
 
 		public bool isInReforgeMenu;
 
-		public bool ReforgeMenu;
+		public bool isOpenReforgeMenu;
 
 		public UserInterface userInterface;
 

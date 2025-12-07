@@ -53,8 +53,8 @@ namespace GadgetBox.GadgetUI
 				priceOffset += new Vector2(46, -20);
 				priceText = Language.GetTextValue("LegacyInterface.46");
 				float xOffset = FontAssets.MouseText.Value.MeasureString(priceText).X - 20;
-				MyUtils.DrawMoney(spriteBatch, "", priceOffset.X + xOffset + 45, priceOffset.Y - 42, Utils.CoinsSplit(Math.Max(_reforgePrice(), 1)), true);
-				MyUtils.DrawSavings(spriteBatch, priceOffset.X, priceOffset.Y - 14, true, MyUtils.IsChinese() ? new(25, 0) : Vector2.Zero);
+				DrawMoney(spriteBatch, "", priceOffset.X + xOffset + 45, priceOffset.Y - 42, Utils.CoinsSplit(Math.Max(_reforgePrice(), 1)), true);
+				DrawSavings(spriteBatch, priceOffset.X, priceOffset.Y - 14, true, IsChinese() ? new(25, 0) : Vector2.Zero);
 			}
 			else
 			{
@@ -79,7 +79,7 @@ namespace GadgetBox.GadgetUI
 		private void DragStart(UIMouseEvent evt)
 		{
 			CalculatedStyle innerDimensions = GetInnerDimensions();
-			if (evt.Target == this && !MyUtils.GetConfig().Lock)
+			if (evt.Target == this && !GetConfig().Lock)
 			{
 				offset = new Vector2(evt.MousePosition.X - Left.Pixels, evt.MousePosition.Y - Top.Pixels);
 				dragging = true;
@@ -91,7 +91,7 @@ namespace GadgetBox.GadgetUI
 			if (evt.Target == this)
 			{
 				dragging = false;
-				MyUtils.SavePosition(Left.Pixels, Top.Pixels);
+				SavePosition(Left.Pixels, Top.Pixels);
 			}
 		}
 	}

@@ -15,7 +15,7 @@ namespace GadgetBox.GadgetUI
 	{
 		public bool Visible { get; internal set; }
 		Color textColor = Color.White;
-		string text = MyUtils.GetText("MoneyUI.Reserve.Label");
+		string text = GetText("MoneyUI.Reserve.Label");
 		public UICounterButton[] CounterButtons { get; private set; } = new UICounterButton[4];
 		public override void DrawSelf(SpriteBatch spriteBatch)
 		{
@@ -34,7 +34,7 @@ namespace GadgetBox.GadgetUI
 			}
 
 			var pos = GetInnerDimensions().Position() - new Vector2(FontAssets.MouseText.Value.MeasureString(text).X, 4);
-			if (MyUtils.IsChinese())
+			if (IsChinese())
 			{
 				pos -= new Vector2(38, 0);
 			}
@@ -91,7 +91,7 @@ namespace GadgetBox.GadgetUI
 		{
 			if (IsMouseHovering)
 			{
-				Main.hoverItemName = MyUtils.GetText("MoneyUI.Reserve.Tooltip"); ;
+				Main.hoverItemName = GetText("MoneyUI.Reserve.Tooltip"); ;
 			}
 			base.DrawSelf(spriteBatch);
 		}

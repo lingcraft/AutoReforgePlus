@@ -16,9 +16,9 @@ namespace AutoReforge
             if (!firstButton)
             {
                 Main.npcChatText = "";
-                AutoReforge.Instance.ReforgeMenu = true;
+                AutoReforge.Instance.isOpenReforgeMenu = true;
             }
-            if (MyUtils.GetConfig().HideDefaultReforgeMenu)
+            if (GetConfig().HideDefaultReforgeMenu)
             {
                 return firstButton;
             }
