@@ -2,23 +2,22 @@
 using Terraria;
 using Terraria.UI;
 
-namespace GadgetBox.GadgetUI
+namespace GadgetBox.GadgetUI;
+
+internal class UIHoverText : UIElement
 {
-	internal class UIHoverText : UIElement
-	{
-		public string HoverText { get; internal set; }
+    public string HoverText { get; internal set; }
 
-		public UIHoverText()
-		{
-			HoverText = "";
-		}
+    public UIHoverText()
+    {
+        HoverText = "";
+    }
 
-		public override void DrawSelf(SpriteBatch spriteBatch)
-		{
-			if (!string.IsNullOrEmpty(HoverText) && IsMouseHovering)
-			{
-				Main.hoverItemName = HoverText;
-			}
-		}
-	}
+    public override void DrawSelf(SpriteBatch spriteBatch)
+    {
+        if (!string.IsNullOrEmpty(HoverText) && IsMouseHovering)
+        {
+            Main.hoverItemName = HoverText;
+        }
+    }
 }

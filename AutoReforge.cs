@@ -15,34 +15,33 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.Utilities;
 
-namespace AutoReforge
+namespace AutoReforge;
+
+public class AutoReforge : Mod
 {
-	public class AutoReforge : Mod
-	{
-		private class DisplayNameUpdater : ModSystem
-		{
-			public override void OnLocalizationsLoaded()
-			{
-				Instance.DisplayName = GetText("ModName");
-			}
-		}
+    private class DisplayNameUpdater : ModSystem
+    {
+        public override void OnLocalizationsLoaded()
+        {
+            Instance.DisplayName = GetText("ModName");
+        }
+    }
 
-		public static AutoReforge Instance => ModContent.GetInstance<AutoReforge>();
+    public static AutoReforge Instance => ModContent.GetInstance<AutoReforge>();
 
-		public static UnifiedRandom Rng = new UnifiedRandom(Environment.TickCount);
+    public static UnifiedRandom Rng = new UnifiedRandom(Environment.TickCount);
 
-		public bool isInReforgeMenu;
+    public bool isInReforgeMenu;
 
-		public bool isOpenReforgeMenu;
+    public bool isOpenReforgeMenu;
 
-		public UserInterface userInterface;
+    public UserInterface userInterface;
 
-		public override void Load()
-		{
-			if (!Main.dedServ)
-			{
-				userInterface = new UserInterface();
-			}
-		}
-	}
+    public override void Load()
+    {
+        if (!Main.dedServ)
+        {
+            userInterface = new UserInterface();
+        }
+    }
 }
