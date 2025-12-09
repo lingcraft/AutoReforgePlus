@@ -29,8 +29,6 @@ public class AutoReforge : Mod
 
     public static AutoReforge Instance => ModContent.GetInstance<AutoReforge>();
 
-    public static UnifiedRandom Rng = new UnifiedRandom(Environment.TickCount);
-
     public bool isInReforgeMenu;
 
     public bool isOpenReforgeMenu;
