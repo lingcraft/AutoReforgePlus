@@ -1,4 +1,14 @@
 ﻿﻿[img]https://i.imgur.com/ki1CPZe.gif[/img]
 [h2]自动重铸优化版，一键重铸装备到指定前缀[/h2]
-原模组：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge[/url]
-优化说明：原模组的重铸界面固定，无法调整位置。本模组优化了这个功能，可以自由拖动重铸窗口调整位置，并且自动记忆窗口位置，除了可以手动拖动调整，还可以在设置界面设置窗口的X、Y坐标。
+[b]原模组：[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge[/url][/b]
+[b]优化说明：[/b]
+[olist]
+    [*]重铸界面增加拖动功能，重开重铸界面、重进游戏均可自动记忆位置，设置页也可以设置窗口位置。
+    [*]界面完善，部分未汉化的控件和提示进行汉化。
+    [*]增加锁定按钮，可锁定界面，防止不小心拖动。
+    [*]增加隐藏原始哥布林重铸界面的功能，默认开启，只显示本模组的重铸界面并隐藏原始哥布林重铸界面。
+    [*]修复原模组的重铸价格和原始哥布林重铸界面的价格不一样的问题。
+    [*]移除重铸选项列表中的空前缀选项。
+    [*]适配其他模组的前缀稀有度颜色，修复其他模组的前缀显示为白色的问题。
+[/olist]
+[quote=tModLoader AutoReforgePlus]Developed By lingcraft[/quote]
