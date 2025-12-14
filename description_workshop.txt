@@ -11,4 +11,3 @@
     [*]移除重铸选项列表中的空前缀选项。
     [*]适配其他模组的前缀稀有度颜色，修复其他模组的前缀显示为白色的问题。
 [/olist]
-[quote=tModLoader AutoReforgePlus]Developed By lingcraft[/quote]

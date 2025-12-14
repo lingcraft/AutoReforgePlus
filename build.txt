@@ -2,4 +2,5 @@ displayName = Auto Reforge Plus
 author = lingcraft
 version = 1.0.9
 homepage = https://github.com/lingcraft/AutoReforgePlus
+noCompile = true
 buildIgnore = *.user

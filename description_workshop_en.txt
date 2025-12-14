@@ -11,4 +11,3 @@
     [*]Removed the empty prefix option from the reforging options list.
     [*]Adapted the prefix rarity colors for other mods and fixed the issue where prefixes in other mods were displayed as white.
 [/olist]
-[quote=tModLoader AutoReforgePlus]Developed By lingcraft[/quote]
