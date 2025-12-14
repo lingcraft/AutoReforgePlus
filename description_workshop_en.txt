@@ -1,6 +1,14 @@
 ﻿﻿[img]https://i.imgur.com/ki1CPZe.gif[/img]
 [h2]Auto Reforge Plus[/h2]
-Original mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge[/url]
-Optimized version of Auto Reforge mod, one-click reforge equipment to the specified prefix, freeing your hands.
-Optimization: This mod allows you to freely drag the reforge window to adjust its position, and automatically memorize the window position. In addition, you can also set the X and Y coordinates of the window in the settings interface.
+[b]Original mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge[/url][/b]
+[b]Optimization Notes：[/b]
+[olist]
+    [*]Added drag functionality to the reforging interface. Reopening the reforging interface and restarting the game will automatically remember the current position. The window position can also be set in the settings page.
+    [*]Improved the interface, some previously untranslated controls and prompts have been translated.
+    [*]Added a lock button to lock the interface and prevent accidental dragging.
+    [*]Added the ability to hide the original goblin reforging interface. Enabled by default, this only displays the reforging interface for this mod and hides the original goblin reforging interface.
+    [*]Fixed the issue where the reforging price in the original mod was different from the price in the original goblin reforging interface.
+    [*]Removed the empty prefix option from the reforging options list.
+    [*]Adapted the prefix rarity colors for other mods and fixed the issue where prefixes in other mods were displayed as white.
+[/olist]
 [quote=tModLoader AutoReforgePlus]Developed By lingcraft[/quote]
