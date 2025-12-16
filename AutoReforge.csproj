@@ -1,22 +1,18 @@
-
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\tModLoader.targets" />
-  <PropertyGroup>
-    <AssemblyName>AutoReforge</AssemblyName>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  <ItemGroup>
+	<Import Project="..\tModLoader.targets" />
+	<PropertyGroup>
+		<AssemblyName>AutoReforge</AssemblyName>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
 		<PackageReference Include="Solaestas.tModLoader.ModBuilder" Version="1.6.1" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="./README.md;./README-en.md;./How-To-Use-Search.md">
-			<Visible>false</Visible>
-		</None>
 		<None Include="./icon.png;./icon_workshop.png">
 			<Visible>false</Visible>
 		</None>
-		<None Include="./description.txt;./description_workshop.txt;./description_workshop_en.txt">
-			<Visible>true</Visible>
+		<None Include="./changelog.txt;./description.txt;./description_workshop.txt;./description_workshop_en.txt">
+			<Visible>false</Visible>
 		</None>
 		<None Include=".gitignore;.gitattributes;./LICENSE">
 			<Visible>false</Visible>
