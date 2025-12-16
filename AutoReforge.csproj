@@ -17,5 +17,8 @@
 		<None Include=".gitignore;.gitattributes;./LICENSE">
 			<Visible>false</Visible>
 		</None>
+		<None Include="./*.dll;./*.pdb;./*.deps.json">
+			<Visible>false</Visible>
+		</None>
 	</ItemGroup>
 </Project>
